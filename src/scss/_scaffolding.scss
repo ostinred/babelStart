@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+$global-color: #fff !global;
+$primary-color: red !global;
+$grey-base: #333 !global;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 *,
 *::before,
 *::after {
@@ -10,38 +26,22 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: $transparent-color;
+  -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 400;
   color: $grey-base;
   background-color: $global-color;
   -webkit-overflow-scrolling: touch;
-
-  &.is-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-  }
-
-  &.modal-is-open {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
 }
 
 a {
-  background-color: $transparent-color;
+  background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
   color: $grey-base;
@@ -50,15 +50,15 @@ a {
   &:hover,
   &:focus,
   &:active {
-    outline:none;
+    outline: none;
   }
 }
 
 a,
 area,
 button,
-[role="button"],
-input:not([type="range"]),
+[role='button'],
+input:not([type='range']),
 label,
 select,
 summary,
@@ -69,23 +69,18 @@ textarea {
 img {
   vertical-align: middle;
   border-style: none;
-
-  &.object-fit {
-    @include object-fit;
-  }
-  
-  &.ir {
-    @include img-responsive;
-  }
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a,
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"],
-[role=button],
-[role=link] {
+html [type='button'],
+[type='reset'],
+[type='submit'],
+[role='button'],
+[role='link'] {
   appearance: none;
   -webkit-appearance: none;
   box-shadow: none;

@@ -1,10 +1,2 @@
-// base
-@import "base/variables";
-@import "base/mixins";
-@import "base/index";
-
-// components
-@import "components/index";
-
-// pages
-@import "pages/index";
+@import './normalize';
+@import './scaffolding';
