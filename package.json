@@ -22,7 +22,7 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "i": "^0.3.6",
-    "npm": "^5.6.0"
+    "npm": "^6.13.4"
   },
   "dependencies": {
     "gulp-notify": "^3.0.0",
